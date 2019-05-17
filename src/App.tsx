@@ -27,6 +27,7 @@ const App: FC = () => {
 // VSCode te advierte y te permite instalarlos fácilmente (@types/libreria)
   return (
     <main className="react-calculator">
+      <span>Calculator</span>
       <Result text={numbers.length ? numbers[numbers.length - 1] : numbers[0]} />
       <Numbers 
         onClickNumber={(number: string) => setStack(`${stack}${number}`)} />

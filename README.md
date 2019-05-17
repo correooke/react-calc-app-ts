@@ -171,7 +171,40 @@ En cambio con esta configuración se tomarán sólo aquellos archivos que se enc
 
     configure(loadStories, module);
 
-  
+### Test Unitario Automático
+
+Para la creación de test se utilizó la librería "react-testing-library" orientada a generar buenas prácticas de testeo.
+
+Se agregaron las siguientes librerias abocadas a testing:
+- jest-dom: Agrega matchers específicos del DOM que ayudan a un mejor entendimiento del testing sobre el objeto bajo testing (OUT)
+- react-test-renderer: Librería con testing básico de react
+- react-testing-library
+
+Todas las librerías anteriores se instalan con "yarn add --dev [nombre_libreria]"
+
+### Test E2E o Visual 
+
+Se utiliza la librería Cypress. 
+
+Instalación: yarn add --dev cypress
+
+Utilización: npx cypress open
+
+Al ejecutar ese comando se genera un archivo "cypress.json" y una carpeta "cypress" con 4 subcarpetas: "fixtures", "integration", "plugins" y "support". Además se levanta una consola.
+
+Dentro de "integration" se encuentran ejemplos de test
+
+Algunos tips: 
+- Instalando "concurrently" se puede crear en el package.json, sección scripts un comando para iniciar directamente la aplicación y la consola de prueba de cypress. 
+
+- Configurando el archivo cypress.json, opción "baseUrl" se puede utilizar una Url por defecto. 
+
+Generando comandos personalizados dentro de "support/commands.js" se puede hacer código reutilizable.
+
+Generando datos dentro de "fixture" se puede simular la respuesta del server
+
+https://docs.cypress.io/examples/examples/tutorials.html#5-Todo-item-behavior
+
 ### Links de interés
 - https://facebook.github.io/create-react-app/docs/developing-components-in-isolation
 - https://storybook.js.org/basics/writing-stories/
