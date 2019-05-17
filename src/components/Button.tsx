@@ -9,7 +9,7 @@ type Props = {
 }
 
 const Button: FC<Props> = ({type, text, clickHandler}) => (
-    <button className={type} onClick={() => clickHandler(text)}>
+    <button role="button" className={type} onClick={() => clickHandler(text)}>
         <span className="title">{text}</span>
     </button>
 );

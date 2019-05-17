@@ -182,6 +182,10 @@ Se agregaron las siguientes librerias abocadas a testing:
 
 Todas las librerías anteriores se instalan con "yarn add --dev [nombre_libreria]"
 
+Para agregar un "setup" inicial se crea un archivo "src/setupTests.js"
+#### Información de testing sobre CRA:
+- https://facebook.github.io/create-react-app/docs/running-tests
+
 ### Test E2E o Visual 
 
 Se utiliza la librería Cypress. 
